@@ -31,4 +31,4 @@ yarn test    # run tests
 
 ## deploy
 
-Pushes to `main` auto-deploy to GitHub Pages via Actions. You don't have to do anything.
+Push to `main` and GitHub Actions builds + publishes the site automatically.
