@@ -13,7 +13,7 @@ Paste messy Claude Code CLI output on the left, get clean readable text on the r
 
 ## local dev
 
-You'll need Node.js
+you'll need Node.js
 
 ```bash
 git clone https://github.com/noahjonesx/scrub
