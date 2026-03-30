@@ -28,7 +28,3 @@ Open `http://localhost:5173`. Done.
 yarn build   # production build → dist/
 yarn test    # run tests
 ```
-
-## deploy
-
-Push to `main` and GitHub Actions builds + publishes the site automatically.
