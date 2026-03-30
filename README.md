@@ -1,6 +1,6 @@
 # scrub
 
-Paste messy Claude Code CLI output on the left, get clean readable text on the right. That's it.
+Paste messy Claude Code CLI output on the left, get clean readable text on the right.
 
 **[Try it →](https://noahjonesx.github.io/scrub/)**
 
@@ -11,11 +11,9 @@ Paste messy Claude Code CLI output on the left, get clean readable text on the r
 - strips 2-space indentation (while leaving code blocks alone)
 - collapses excessive blank lines
 
-Toggle any of them off if you're feeling adventurous.
-
 ## local dev
 
-You'll need Node.js. You probably already have it.
+You'll need Node.js
 
 ```bash
 git clone https://github.com/noahjonesx/scrub
