@@ -1,6 +1,6 @@
 # scrub
 
-Paste messy Claude Code CLI output on the left, get clean readable text on the right.
+paste messy Claude Code CLI output on the left, get clean readable text on the right.
 
 ## what it does
 
