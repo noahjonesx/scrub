@@ -2,8 +2,6 @@
 
 Paste messy Claude Code CLI output on the left, get clean readable text on the right.
 
-**[Try it →](https://noahjonesx.github.io/scrub/)**
-
 ## what it does
 
 - strips ANSI escape codes (the `\x1b[31m` garbage)
