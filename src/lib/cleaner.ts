@@ -13,7 +13,7 @@ export const defaultOptions: CleanOptions = {
 }
 
 export function scrub(input: string, options: CleanOptions = defaultOptions): string {
-  let text = input
+  let text = input.replace(/\r\n/g, '\n').replace(/\r/g, '\n')
   if (options.stripAnsi) text = stripAnsi(text)
   if (options.stripBoxDrawing) text = stripBoxDrawing(text)
   if (options.stripIndent) text = stripIndent(text)
@@ -22,7 +22,10 @@ export function scrub(input: string, options: CleanOptions = defaultOptions): st
 }
 
 export function stripAnsi(text: string): string {
-  return text.replace(/\x1b\[[0-9;]*[a-zA-Z]/g, '')
+  return text
+    .replace(/\x1b\[[0-9;?]*[a-zA-Z]/g, '')           // CSI sequences (colors, cursor, private modes)
+    .replace(/\x1b\][^\x07\x1b]*(?:\x07|\x1b\\)/g, '') // OSC sequences (hyperlinks, window title)
+    .replace(/\x1b[@-_][0-~]*/g, '')                    // other two-byte escape sequences
 }
 
 export function stripBoxDrawing(text: string): string {
@@ -48,7 +51,7 @@ export function stripIndent(text: string): string {
     }
 
     if (inCodeFence) {
-      result.push(line.startsWith('  ') ? line.slice(2) : line)
+      result.push(line)
     } else {
       result.push(line.startsWith('  ') ? line.slice(2) : line)
     }
